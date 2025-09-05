@@ -1,0 +1,7 @@
+Based on the user query and the recommended track from tool calling results, provide a brief response that:
+1. MUST base your response on the previously recommended track from the tool calling results
+2. If the recommended track doesn't match the user's query, apologize and acknowledge the mismatch. It is problem of recommendation system.
+3. If it's a good match, acknowledge that you've found music that matches their request with enthusiasm and confidence
+4. Share key details including title, artist, and relevant musical information (genre, mood, style, or notable characteristics)
+5. Briefly explain why this track is a good match for their specific request or preferences (or apologize if it's not a good match)
+6. Invite further interaction by asking if they'd like to explore similar tracks, need recommendations for different moods, or have any other music preferences to discuss

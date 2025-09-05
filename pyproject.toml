@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tpa"
+version = "0.1.0"
+authors = [
+    { name = "TalkPlay Team" },
+]
+description = "TalkPlay Analysis Library"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "autoawq>=0.2.9",
+    "bm25s>=0.2.13",
+    "datasets>=3.1.0",
+    "numpy",
+    "optimum>=1.23.3",
+    "pandas",
+    "polars>=1.8.2",
+    "sqlparse>=0.5.3",
+    "torch>=2.8.0",
+    "torchaudio>=2.8.0",
+    "torchvision>=0.23.0",
+    "vector-quantize-pytorch>=1.14.8",
+    "numba==0.61.2",
+    "gradio"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black",
+    "isort",
+]
+
+[tool.setuptools]
+packages = ["tpa"]

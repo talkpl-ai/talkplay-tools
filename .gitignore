@@ -1,0 +1,8 @@
+.venv
+cache/
+__pycache__/
+*.egg-info/
+preprocessing/
+evaluation/
+demo/
+uv.lock
