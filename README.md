@@ -109,6 +109,7 @@ app.py               # Gardio App for demo
 
 - Demo/test data: `TalkPlayData-2` on Hugging Face
   - https://huggingface.co/datasets/talkpl-ai/TalkPlayData-2
+  - https://talkpl.ai/talkplaydata2.html
 
 ## License
 
