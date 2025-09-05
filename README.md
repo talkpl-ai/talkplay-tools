@@ -1,5 +1,5 @@
 # TalkPlay-Tools
-[![arXiv](https://img.shields.io/badge/arXiv-2410.03264-blue.svg)](#)
+[![arXiv](https://img.shields.io/badge/arXiv-####-blue.svg)](#)
 [![Datasets](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Datasets-yellow)](https://huggingface.co/datasets/talkpl-ai/TalkPlayData-2)
 
 An LLM-powered music recommendation system that uses tool calling to orchestrate a unified retrieval → reranking pipeline over SQL, BM25, embeddings (text/audio/image/CF), and semantic IDs.
@@ -15,12 +15,10 @@ An LLM-powered music recommendation system that uses tool calling to orchestrate
 - **Personalization**: Warm/cold-start aware strategies with user-item similarity when applicable.
 - **Repro-friendly**: Lightweight test indices for quick demos; cache-first design for tools and models.
 
-## Requirements
+## Requirements / Setup
 
 - Python 3.11
 - Linux, macOS, or WSL; GPU recommended for embedding/LLM models (CPU works but slower)
-
-### Setup
 
 ```bash
 python -m pip install uv
@@ -36,7 +34,7 @@ uv pip install -e .
 Prebuilt demo indices are expected under `./cache`. You can download a prepared bundle and extract it:
 
 ```bash
-wget UPDATE_SOON/{tool_env.tar.gz}
+wget https://huggingface.co/datasets/talkpl-ai/TalkPlayTools-Env/resolve/main/tool_env.tar.gz
 tar -xzvf tool_env.tar.gz -C ./cache
 ```
 
@@ -53,27 +51,42 @@ Expected subdirectories (after extraction):
 Run an example query with the provided test data (cold-start user case). This demo uses only **6,744 tracks** from the test split of [TalkPlayData-2](https://huggingface.co/datasets/talkpl-ai/TalkPlayData-2). Due to licensing constraints, the system returns Spotify links instead of direct audio files.
 
 ```bash
-python run.py --user_query "I'm looking for something chill and relaxed, slow tempo piano music."
+python run.py --user_query "I'm looking for calm and slow tempo piano music."
 ```
 
 Example output:
 
 ```bash
 ----------------------------------------------------------------------------------------------------
-🎵 Music: https://open.spotify.com/track/6lNUewdE3ZY4vUMxXpHtIC
+🎵 Music: https://open.spotify.com/track/00CXUMREit80f2McJsjcIz
 🤖 Assistant Response:
-I’ve found a perfect match for you! **"White Lake" by Deaf Center** is a slow-tempo (61.7 BPM) piano piece with an atmospheric, calm, and melancholic vibe. It falls under experimental and alternative genres, but its soothing, dreamy quality makes it ideal for relaxing. The Bb minor key adds a subtle emotional depth, while the track’s soft, instrumental nature keeps it chill and easy to listen to.
+I’ve found a perfect match for your request!
+**"Lieder ohne Worte (Songs without Words), Book 2, Op. 30: No. 7 in E-flat major"**
+by **Felix Mendelssohn**, performed by **Péter Nagy**.
+This classical piano piece features a **slow tempo (65.79 BPM)**, **mellow melodies**,
+and a **romantic, emotional tone** that exudes calm and introspection.
 
-This track seems to align well with your request for slow, relaxed piano music. Would you like to explore similar tracks or need recommendations for different moods? 😊
+The track’s **F# major key** and **instrumental, melancholic style**
+make it ideal for a relaxed, reflective mood. It’s a beautifully
+crafted piece that aligns perfectly with your request for calm and slow piano music.
+
+Would you like to explore similar tracks, or need recommendations for different moods?
+I’m here to help! 🎹
 ----------------------------------------------------------------------------------------------------
 More detail results (Chain of Thought / Tool Calling / Response) are saved in ./demo/static
 ```
 
 ## Demo App
+We've implemented an interactive Gradio web interface for multi-turn conversations with the TalkPlay agent. Note that multi-turn conversation capabilities will be updated in future releases.
 
+To launch the demo interface:
 ```
 python app.py
 ```
+
+<p align="center">
+  <img src="https://i.imgur.com/uyCUWwF.png" alt="Gardio Demo for Tool Calling">
+</p>
 
 
 ### Configuration

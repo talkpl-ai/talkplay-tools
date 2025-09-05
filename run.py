@@ -36,7 +36,7 @@ if __name__ == "__main__":
     parser.add_argument("--gender", type=str, default="male")
     parser.add_argument("--country_name", type=str, default="United States")
     parser.add_argument("--user_type", type=str, default="cold_start")
-    parser.add_argument("--user_query", type=str, default="I'm looking for something chill and relaxed, slow tempo piano music.")
+    parser.add_argument("--user_query", type=str, default="I'm looking for calm and slow tempo piano music.")
     parser.add_argument("--save_path", type=str, default="./demo/static")
     args = parser.parse_args()
     main(args)
