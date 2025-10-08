@@ -1,5 +1,5 @@
 # TalkPlay-Tools
-[![arXiv](https://img.shields.io/badge/arXiv-####-blue.svg)](#)
+[![arXiv](https://img.shields.io/badge/arXiv-2510.01698-blue.svg)](https://arxiv.org/abs/2510.01698)
 [![Datasets](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Datasets-yellow)](https://huggingface.co/datasets/talkpl-ai/TalkPlayData-2)
 
 An LLM-native music recommendation system that uses tool calling to orchestrate a unified retrieval → reranking pipeline over SQL, BM25, embeddings (text/audio/image/CF), and semantic IDs.
