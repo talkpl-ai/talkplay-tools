@@ -158,7 +158,7 @@ class MusicRecommendationAgent:
             chat_history=self.session_memory,
             message=message,
             incontext_examples=None,
-            max_new_tokens=32768
+            max_new_tokens=8192 * 8
         )
         tool_calling_time = time() - start
         # stage 2, tool calling
@@ -177,7 +177,7 @@ class MusicRecommendationAgent:
             chat_history=self.session_memory,
             message=message,
             recommend_track_metadata=top1_recommend_track_metadata,
-            max_new_tokens=32768
+            max_new_tokens=2048
         )
         answer_generation_time = time() - start
         self.session_memory.append({"role": "assistant", "content": f"recommended track: {top1_recommend_track_metadata}" + "\n" + answer_response})

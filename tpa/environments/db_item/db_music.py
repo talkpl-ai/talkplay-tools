@@ -52,7 +52,7 @@ class MusicCatalog:
         track_name = metadata['track_name'][0].lower()
         artist_name = ", ".join(metadata['artist_name']).lower()
         album_name = ", ".join(metadata['album_name']).lower()
-        release_date = metadata['track_release_date_spotify']
+        release_date = metadata['release_date']
         tag_list = metadata['tag_list']
         semantic_id = self.id_to_semantic_id(track_id)
         entity_str = f"track_id: {track_id}, title: {track_name}, artist: {artist_name}, album: {album_name}"

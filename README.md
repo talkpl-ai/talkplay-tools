@@ -34,8 +34,8 @@ uv pip install -e .
 Prebuilt demo indices are expected under `./cache`. You can download a prepared bundle and extract it:
 
 ```bash
-wget https://huggingface.co/datasets/talkpl-ai/TalkPlayTools-Env/resolve/main/tool_env.tar.gz
-tar -xzvf tool_env.tar.gz -C ./cache
+wget https://huggingface.co/datasets/talkpl-ai/TalkPlayTools-Env/resolve/main/test_env.tar.gz
+tar -xzvf test_env.tar.gz -C ./cache
 ```
 
 Expected subdirectories (after extraction):
